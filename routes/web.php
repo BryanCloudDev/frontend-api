@@ -13,26 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('/')->group(function () {
+
+    Route::get('signin', function () {
+        return view('signin');
+    });
+    
+    Route::get('signup', function () {
+        return view('signup');
+    });
+    
+    Route::get('vaccine_update', function () {
+        return view('vaccine_update');
+    });
+    
+    Route::get('state_update', function () {
+        return view('state_update');
+    });
+    
+    Route::get('create_vaccine', function () {
+        return view('create_vaccine');
+    });
+
 });
 
-Route::get('/signin', function () {
-    return view('signin');
-});
-
-Route::get('/signup', function () {
-    return view('signup');
-});
-
-Route::get('/vaccine_update', function () {
-    return view('vaccine_update');
-});
-
-Route::get('/state_update', function () {
-    return view('state_update');
-});
-
-Route::get('/create_vaccine', function () {
-    return view('create_vaccine');
-});

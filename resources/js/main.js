@@ -1,4 +1,6 @@
 //importamos vue
+require('./bootstrap');
+
 import { createApp } from 'vue';
 //importamos la app de App.vue
 
@@ -11,11 +13,11 @@ import CreateVaccine from './CreateVaccine.vue';
 //creamos la aplicacion y se le pasa el modulo principal
 //montamos la app y como parametro sera el contenedor a donde se cargara la app
 
-const login = createApp(Signin);
-login.mount('#signin');
+const signin = createApp(Signin);
+signin.mount('#signin');
 
-const signin = createApp(Signup);
-signin.mount('#signup');
+const signup = createApp(Signup);
+signup.mount('#signup');
 
 const vaccineUpdate = createApp(VaccineUpdate);
 vaccineUpdate.mount('#vaccine_update');
