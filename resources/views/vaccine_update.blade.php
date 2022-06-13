@@ -22,29 +22,29 @@
                             <div class="mb-md-5 mt-md-4 pb-5">
 
                                 <h1>Update Vaccine</h1>
-                                
+
                                 <form action="http://localhost/PHPexercises/API.php" method="GET">
 
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Name</label>
-                                        <input type="text" name="vaccineName" class="form-control form-control">    
+                                        <input type="text" name="vaccineName" class="form-control form-control">
                                     </div>
-                                    
+
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Available Quantity</label>
-                                        <input type="text" name="availableQuantity" class="form-control form-control">    
+                                        <input type="text" name="availableQuantity" class="form-control form-control">
                                     </div>
 
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Type</label>
-                                        <input type="text" name="vaccineType" class="form-control form-control">    
+                                        <input type="text" name="vaccineType" class="form-control form-control">
                                     </div>
 
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Creator</label>
-                                        <input type="text" name="vaccineCreator" class="form-control form-control">    
+                                        <input type="text" name="vaccineCreator" class="form-control form-control">
                                     </div>
-                                    
+
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Update</button>
                                 </form>
                             </div>

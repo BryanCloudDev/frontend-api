@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,23 +21,23 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                            <h2 class="fw-bold mb-2 text-uppercase">State Update X</h2>
-                            <form action="">
+                                <h2 class="fw-bold mb-2 text-uppercase">State Update X</h2>
+                                <form action="">
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">State Name</label>
-                                        <input type="text" name="stateName" class="form-control form-control">    
+                                        <input type="text" name="stateName" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Total Population</label>
-                                        <input type="text" name="totalPopulation" class="form-control form-control">    
+                                        <input type="text" name="totalPopulation" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccinated Population</label>
-                                        <input type="text" v-bind:name="vaccinatedPopulation" class="form-control form-control">    
+                                        <input type="text" v-bind:name="vaccinatedPopulation" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Unvaccinated Population</label>
-                                        <input type="text" v-bind:name="unvaccinatedPopulation" class="form-control form-control">    
+                                        <input type="text" v-bind:name="unvaccinatedPopulation" class="form-control form-control">
                                     </div>
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Update</button>
                                 </form>

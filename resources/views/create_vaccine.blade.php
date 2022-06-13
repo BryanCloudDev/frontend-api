@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create new vaccine</title> 
+    <title>Create new vaccine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,36 +20,36 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                            <h2 class="fw-bold mb-2 text-uppercase">Create New Vaccine</h2>
+                                <h2 class="fw-bold mb-2 text-uppercase">Create New Vaccine</h2>
                                 <form action="http://127.0.0.1:8001/registerVaccine" method="post">
                                     @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Name</label>
-                                        <input type="text" name="vaccineName" class="form-control form-control">    
+                                        <input type="text" name="vaccineName" class="form-control form-control">
                                     </div>
-                                    
+
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Available Quantity</label>
-                                        <input type="text" name="availableQuantity" class="form-control form-control">    
+                                        <input type="text" name="availableQuantity" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Type</label>
-                                        <input type="text" name="vaccineType" class="form-control form-control">    
+                                        <input type="text" name="vaccineType" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Creator</label>
-                                        <input type="text" name="vaccineCreator" class="form-control form-control">    
+                                        <input type="text" name="vaccineCreator" class="form-control form-control">
                                     </div>
                                     @if ($errors->any())
                                     <div class="alert alert-danger alert-dismissible fade show">
                                         <strong>Check the data entered</strong>
                                         @foreach ($errors->all() as $error)
-                                        
+
                                         <p class="myError">- {{$error}}</p>
-                                                @endforeach
+                                        @endforeach
                                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                                            </ul>
-                                        </div>
+                                        </ul>
+                                    </div>
                                     @endif
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Create</button>
                                 </form>

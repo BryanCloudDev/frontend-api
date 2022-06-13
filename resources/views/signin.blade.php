@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link href="{{ asset('../css/app.css') }}" rel="stylesheet">     
+    <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <section class="min-vh-100 gradient-custom d-flex align-items-center">
@@ -25,22 +25,22 @@
                                     @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Username</label>
-                                        <input type="text" name="email" class="form-control form-control">    
+                                        <input type="text" name="email" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Password</label>
-                                        <input type="password" name="password" class="form-control form-control">    
+                                        <input type="password" name="password" class="form-control form-control">
                                     </div>
                                     @if ($errors->any())
                                     <div class="alert alert-danger alert-dismissible fade show">
                                         <strong>Check the data entered</strong>
                                         @foreach ($errors->all() as $error)
-                                        
+
                                         <p class="myError">- {{$error}}</p>
-                                                @endforeach
+                                        @endforeach
                                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                                            </ul>
-                                        </div>
+                                        </ul>
+                                    </div>
                                     @endif
                                     <p class="small mb-5 pb-lg-2"><a class="text-dark" href="#!">Forgot password?</a></p>
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Sign In</button>
@@ -48,7 +48,7 @@
                             </div>
                             <div>
                                 <p class="mb-0">
-                                    Don't have an account? 
+                                    Don't have an account?
                                     <a href="http://127.0.0.1:8000/signup" class="text-dark fw-bold">Sign up!</a>
                                 </p>
                             </div>
