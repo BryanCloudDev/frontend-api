@@ -20,12 +20,30 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                                <Title message="Create new vaccine"/>
+
+                            <h1>Create New Vaccine</h1>
                                 <form action="">
-                                    <Input :name="vaccineName" value="Vaccine name" />
-                                    <Input :name="availableQuantity" value="Available Quantity" />
-                                    <Input :name="vaccineType" value="Vaccine type" />
-                                    <Input :name="vaccineCreator" value="Vaccine Creator" />
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Vaccine Name</label>
+                                        <input type="text" name="vaccineName" class="form-control form-control">    
+                                    </div>
+                                    
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Available Quantity</label>
+                                        <input type="text" name="availableQuantity" class="form-control form-control">    
+                                    </div>
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Vaccine Type</label>
+                                        <input type="text" name="vaccineType" class="form-control form-control">    
+                                    </div>
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Vaccine Creator</label>
+                                        <input type="text" name="vaccineCreator" class="form-control form-control">    
+                                    </div>
+
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Create</button>
                                 </form>
                             </div>

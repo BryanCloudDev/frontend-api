@@ -20,12 +20,30 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                                <Title message="State Update X"/>
-                                <form action="">
-                                    <Input :name="stateName" value="State Name" />
-                                    <Input :name="totalPopulation" value="Total Population" />
-                                    <Input :name="vaccinatedPopulation" value="Vaccinated population" />
-                                    <Input :name="unvaccinatedPopulation" value="Unvaccinated Population" />
+                            <h1>State Update X</h1>
+                            
+                            <form action="">
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">State Name</label>
+                                        <input type="text" name="stateName" class="form-control form-control">    
+                                    </div>
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Total Population</label>
+                                        <input type="text" name="totalPopulation" class="form-control form-control">    
+                                    </div>
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Vaccinated Population</label>
+                                        <input type="text" v-bind:name="vaccinatedPopulation" class="form-control form-control">    
+                                    </div>
+
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Unvaccinated Population</label>
+                                        <input type="text" v-bind:name="unvaccinatedPopulation" class="form-control form-control">    
+                                    </div>
+
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Update</button>
                                 </form>
                             </div>
