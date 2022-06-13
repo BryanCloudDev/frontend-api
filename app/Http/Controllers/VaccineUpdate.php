@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-class CreateVaccine extends Controller
+class VaccineUpdate extends Controller
 {
     function index(){
         return view('create_vaccine');
     }
-    
+
     function register(Request $data){
         $data->validate([
             'vaccineName' => 'required|alpha_num|max:20|min:5',
@@ -25,7 +25,7 @@ class CreateVaccine extends Controller
             'vaccine_type' => $data->vaccineType,
             'vaccine_creator' => $data->vaccineCreator
         ]);
-
+        
         return view('index');
     }
 }

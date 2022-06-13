@@ -10,7 +10,8 @@ class Signin extends Controller
     function index(){
         return view('signin');
     }
-    public function authenticate(Request $data){
+    
+    function authenticate(Request $data){
         $data->validate([
             'email' => 'email|required|max:255',
             'password' => 'required|alpha_num|max:30',

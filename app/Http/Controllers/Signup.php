@@ -4,16 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Redirect;
+
 
 class Signup extends Controller
 {
     function index(){
         return view('signup');
     }
-    public function register(Request $data){
+
+    function register(Request $data){
+        
         $data->validate([
-            'name' => 'string|max:20|required|min:5',
-            'email' => 'email|required|max:255',
+            'name' => 'required|string|max:20|min:5',
+            'email' => 'required|email|max:255',
             'password' => 'required|alpha_num|max:30|min:8',
         ]);
 
@@ -26,10 +30,11 @@ class Signup extends Controller
         $response = json_decode($response,true);
 
         if(isset($response['access_token'])){
-            return view('signin');
+            return  Redirect::route('signin.index');
         }
-        else{
-            return view('signup');
+
+        if(isset($response['email'][0])){
+            return view('signup',['emailError' => $response['email'][0]]);
         }
     }
 }

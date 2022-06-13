@@ -21,7 +21,8 @@
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
                             <h2 class="fw-bold mb-2 text-uppercase">Create New Vaccine</h2>
-                                <form action="">
+                                <form action="http://127.0.0.1:8001/registerVaccine" method="post">
+                                    @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Name</label>
                                         <input type="text" name="vaccineName" class="form-control form-control">    
@@ -39,6 +40,17 @@
                                         <label class="form-label text-start">Vaccine Creator</label>
                                         <input type="text" name="vaccineCreator" class="form-control form-control">    
                                     </div>
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger alert-dismissible fade show">
+                                        <strong>Check the data entered</strong>
+                                        @foreach ($errors->all() as $error)
+                                        
+                                        <p class="myError">- {{$error}}</p>
+                                                @endforeach
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Create</button>
                                 </form>
                             </div>
