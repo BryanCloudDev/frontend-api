@@ -31,11 +31,13 @@ Route::controller(CreateVaccine::class)->group(function()
 {
     Route::post('/registerVaccine', 'register');
     Route::get('/create_vaccine', 'index');
+    Route::delete("/vaccine/{id}","destroy");
 });
 
 Route::get("/",[IndexController::class,"index"]);
 Route::get("/state/{id}",[StateController::class,"index"]);
 Route::post("/state/{id}",[StateController::class,"update"]);
+
 // Route::prefix('/')->group(function () {
 
 //     Route::get('signin', function () {

@@ -10,7 +10,7 @@ class CreateVaccine extends Controller
     function index(){
         return view('create_vaccine');
     }
-    
+
     function register(Request $data){
         $data->validate([
             'vaccineName' => 'required|alpha_num|max:20|min:5',
@@ -27,5 +27,12 @@ class CreateVaccine extends Controller
         ]);
 
         return redirect('/');
+    }
+
+    public function destroy($id){
+        $response = Http::delete("http://127.0.0.1:8000/api/vaccines/$id");
+        if($response->status() == 200){
+            return redirect("/");
+        }
     }
 }

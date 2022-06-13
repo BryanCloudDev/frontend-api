@@ -72,7 +72,11 @@
                                 <dd>{{$vaccine->vaccine_creator}}</dd>
                             </dl>
                             <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <form action="/vaccine/{{$vaccine->id}}" style="display:inline;" method="post">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-danger">Delete</button>
+                            </form>
                         </div>
                     </div>
                 </div>
