@@ -35,16 +35,16 @@
                                         <label class="form-label text-start">Password</label>
                                         <input type="password" name="password" class="form-control form-control">
                                     </div>
-                                    @if ($errors->any() || isset($emailError))
+                                    @if ($errors->any() || session('emailError'))
                                     <div class="alert alert-danger alert-dismissible fade show">
                                         <strong>Check the data entered</strong>
                                         @if($errors->any())
-                                        @foreach ($errors->all() as $error)
-                                        <p class="myError">- {{$error}}</p>
-                                        @endforeach
+                                            @foreach ($errors->all() as $error)
+                                            <p class="myError">- {{$error}}</p>
+                                            @endforeach
                                         @endif
-                                        @if(isset($emailError))
-                                        <p class="myError">- {{$emailError}}</p>
+                                        @if(session('emailError'))
+                                            <p class="myError">- {{session('emailError')}}</p>
                                         @endif
                                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                                         </ul>

@@ -26,6 +26,6 @@ class CreateVaccine extends Controller
             'vaccine_creator' => $data->vaccineCreator
         ]);
 
-        return view('index');
+        return redirect('/');
     }
 }

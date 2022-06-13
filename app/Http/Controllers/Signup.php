@@ -30,11 +30,11 @@ class Signup extends Controller
         $response = json_decode($response,true);
 
         if(isset($response['access_token'])){
-            return  Redirect::route('signin.index');
+            return redirect('signin');
         }
 
         if(isset($response['email'][0])){
-            return view('signup',['emailError' => $response['email'][0]]);
+            return redirect('signup')->with('emailError', $response['email'][0]);
         }
     }
 }

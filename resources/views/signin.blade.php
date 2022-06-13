@@ -31,13 +31,17 @@
                                         <label class="form-label text-start">Password</label>
                                         <input type="password" name="password" class="form-control form-control">
                                     </div>
-                                    @if ($errors->any())
+                                    @if ($errors->any() || isset($loginError))
                                     <div class="alert alert-danger alert-dismissible fade show">
                                         <strong>Check the data entered</strong>
-                                        @foreach ($errors->all() as $error)
-
-                                        <p class="myError">- {{$error}}</p>
-                                        @endforeach
+                                        @if($errors->any())
+                                            @foreach ($errors->all() as $error)
+                                            <p class="myError">- {{$error}}</p>
+                                            @endforeach
+                                        @endif
+                                        @if(isset($loginError))
+                                            <p class="myError">- {{$loginError}}</p>
+                                        @endif
                                         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                                         </ul>
                                     </div>
@@ -49,7 +53,7 @@
                             <div>
                                 <p class="mb-0">
                                     Don't have an account?
-                                    <a href="http://127.0.0.1:8000/signup" class="text-dark fw-bold">Sign up!</a>
+                                    <a href="http://127.0.0.1:8001/signup" class="text-dark fw-bold">Sign up!</a>
                                 </p>
                             </div>
                         </div>

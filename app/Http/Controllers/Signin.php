@@ -25,10 +25,10 @@ class Signin extends Controller
         $response = json_decode($response,true);
 
         if(isset($response['access_token'])){
-            return view('index');
+            return redirect('/');
         }
-        else{
-            return view('signin');
+        elseif(isset($response['message'])){
+            return view('signin',['loginError' => $response['message']]);
         }
     }
 }
