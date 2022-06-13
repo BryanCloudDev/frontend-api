@@ -23,8 +23,9 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                 <a class="nav-link" href="/signin">Sign In</a>
                 <a class="nav-link " href="/signup">Sign Up</a>
-                <form class="d-flex" role="search" method="post" action="">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" method="post" action="/state/city">
+                    @csrf
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="city">
                     <button class="btn btn-darks btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
@@ -32,6 +33,11 @@
     </div>
 </nav>
 <body>
+    @php
+    if(session()->has("populations")){
+    $populations = session()->get("populations");
+    }
+    @endphp
     <section class="min-vh-100 gradient-custom d-flex align-items-center mt-5">
         <div class="container py-5 h-100">
             <div class="row">
@@ -73,9 +79,9 @@
                             </dl>
                             <a href="#" class="btn btn-primary">Edit</a>
                             <form action="/vaccine/{{$vaccine->id}}" style="display:inline;" method="post">
-                            @csrf
-                            @method('delete')
-                            <button class="btn btn-danger">Delete</button>
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-danger">Delete</button>
                             </form>
                         </div>
                     </div>

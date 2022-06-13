@@ -35,6 +35,7 @@ Route::controller(CreateVaccine::class)->group(function()
 });
 
 Route::get("/",[IndexController::class,"index"]);
+Route::post("/state/city",[StateController::class,"states"]);
 Route::get("/state/{id}",[StateController::class,"index"]);
 Route::post("/state/{id}",[StateController::class,"update"]);
 
