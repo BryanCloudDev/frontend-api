@@ -21,23 +21,36 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                                <h2 class="fw-bold mb-2 text-uppercase">State Update X</h2>
-                                <form action="">
+                                <h2 class="fw-bold mb-2 text-uppercase">Update {{$state->states}}</h2>
+                                <form action="/state/{{$state->id}}" method="POST">
+                                    @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">State Name</label>
-                                        <input type="text" name="stateName" class="form-control form-control">
+                                        <input type="text" value="{{$state->states}}" name="states" class="form-control form-control">
+                                        @error('states')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Total Population</label>
-                                        <input type="text" name="totalPopulation" class="form-control form-control">
+                                        <input type="text" value="{{$state->total_population}}" name="total_population" class="form-control form-control">
+                                        @error('total_population')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccinated Population</label>
-                                        <input type="text" v-bind:name="vaccinatedPopulation" class="form-control form-control">
+                                        <input type="text" value="{{$state->vaccinated_population}}" name="vaccinated_population" class="form-control form-control">
+                                        @error('vaccinated_population')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Unvaccinated Population</label>
-                                        <input type="text" v-bind:name="unvaccinatedPopulation" class="form-control form-control">
+                                        <input type="text" value="{{$state->unvaccinated_population}}" name="unvaccinated_population" class="form-control form-control">
+                                        @error('unvaccinated_population')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Update</button>
                                 </form>

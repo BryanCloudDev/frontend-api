@@ -12,31 +12,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    <a class="nav-link" href="/signin">Sign In</a>
-                    <a class="nav-link " href="signup">Sign Up</a>
-                    <form class="d-flex" role="search" method="post" action="">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-darks btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Name</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" href="/signin">Sign In</a>
+                <a class="nav-link " href="/signup">Sign Up</a>
+                <form class="d-flex" role="search" method="post" action="">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-darks btn-outline-light" type="submit">Search</button>
+                </form>
             </div>
         </div>
-    </nav>
-    <section class="min-vh-100 gradient-custom d-flex align-items-center">
-
-
+    </div>
+</nav>
+<body>
+    <section class="min-vh-100 gradient-custom d-flex align-items-center mt-5">
         <div class="container py-5 h-100">
+            <div class="row">
+                <h2>States</h2>
+                @foreach($populations as $population)
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">{{$population->states}}</h5>
+                            <dl>
+                                <dt>Total Population</dt>
+                                <dd>{{$population->total_population}}</dd>
+                                <dt>Vaccinated Population</dt>
+                                <dd>{{$population->vaccinated_population}}</dd>
+                                <dt>Unvaccinated Population</dt>
+                                <dd>{{$population->unvaccinated_population}}</dd>
+                            </dl>
+                            <a href="/state/{{$population->id}}" class="btn btn-primary">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
 
+            <div class="row mt-5">
+                <h2>Vaccines</h2>
+                @foreach($vaccines as $vaccine)
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">{{$vaccine->vaccine_name}}</h5>
+                            <dl>
+                                <dt>Available Quantity</dt>
+                                <dd>{{$vaccine->available_quantity}}</dd>
+                                <dt>Vaccine Type</dt>
+                                <dd>{{$vaccine->vaccine_type}}</dd>
+                                <dt>Vaccine Creator</dt>
+                                <dd>{{$vaccine->vaccine_creator}}</dd>
+                            </dl>
+                            <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
 
         </div>
     </section>
