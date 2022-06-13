@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <section class="min-vh-100 gradient-custom d-flex align-items-center">
@@ -20,10 +20,8 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-
-                            <h1>Create New Vaccine</h1>
+                            <h2 class="fw-bold mb-2 text-uppercase">Create New Vaccine</h2>
                                 <form action="">
-
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Name</label>
                                         <input type="text" name="vaccineName" class="form-control form-control">    
@@ -33,17 +31,14 @@
                                         <label class="form-label text-start">Available Quantity</label>
                                         <input type="text" name="availableQuantity" class="form-control form-control">    
                                     </div>
-
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Type</label>
                                         <input type="text" name="vaccineType" class="form-control form-control">    
                                     </div>
-
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Creator</label>
                                         <input type="text" name="vaccineCreator" class="form-control form-control">    
                                     </div>
-
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Create</button>
                                 </form>
                             </div>
@@ -53,8 +48,5 @@
             </div>
         </div>
     </section>
-    <!-- <div id="create_vaccine"></div>
-    <script src="{{ asset('/js/main.js') }}"></script> -->
-    <!-- <script type="text/javascript"> window.csrf_token = "{{ csrf_token() }}"</script> -->
 </body>
 </html>

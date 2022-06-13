@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sign Up</title>
@@ -11,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <section class="min-vh-100 gradient-custom d-flex align-items-center">
@@ -20,10 +20,32 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-                                <form action="">
-                                    <Title message="Sign Up"/>
-                                    <Input :name="username" value="Username" />
-                                    <Input :name="password" value="Password" />
+                            <h2 class="fw-bold mb-2 text-uppercase">Sign up</h2>
+                                <form action="http://127.0.0.1:8001/register" method="post">
+                                    @csrf
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Name</label>
+                                        <input type="text" name="name" class="form-control form-control">    
+                                    </div>
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Username</label>
+                                        <input type="text" name="email" class="form-control form-control">    
+                                    </div>
+                                    <div class="label form-outline form-white mb-4">
+                                        <label class="form-label text-start">Password</label>
+                                        <input type="password" name="password" class="form-control form-control">    
+                                    </div>
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger alert-dismissible fade show">
+                                        <strong>Check the data entered</strong>
+                                        @foreach ($errors->all() as $error)
+                                        
+                                        <p class="myError">- {{$error}}</p>
+                                                @endforeach
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <p class="small mb-5 pb-lg-2"><a class="text-dark" href="#!">Forgot password?</a></p>
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
                                 </form>
@@ -34,8 +56,5 @@
             </div>
         </div>
     </section>
-    <!-- <div id="signup"></div>
-    <script src="{{ asset('/js/main.js') }}"></script> -->
-    <!-- <script type="text/javascript"> window.csrf_token = "{{ csrf_token() }}"</script> -->
 </body>
 </html>
