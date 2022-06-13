@@ -25,7 +25,27 @@ class VaccineUpdate extends Controller
             'vaccine_type' => $data->vaccineType,
             'vaccine_creator' => $data->vaccineCreator
         ]);
-        
+
         return redirect('/');
+    }
+
+    public function store($id){
+        $vaccine = Http::get("http://127.0.0.1:8000/api/vaccines/$id");
+        return view("vaccine_update",[
+            "vaccine" => $vaccine->object()
+        ]);
+    }
+
+    public function update(Request $request, $id){
+        $request->validate([
+            "vaccine_name" => "min:2|string",
+            "available_quantity" => "min:2|string",
+            "vaccine_type" => "min:2|string",
+            "vaccine_creator" => "min:2|string",
+        ]);
+        $response = Http::put("http://127.0.0.1:8000/api/vaccines/$id",$request->all());
+        if($response->status() == 202){
+            return redirect("/");
+        }
     }
 }

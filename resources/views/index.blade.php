@@ -77,7 +77,7 @@
                                 <dt>Vaccine Creator</dt>
                                 <dd>{{$vaccine->vaccine_creator}}</dd>
                             </dl>
-                            <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="/vaccine/{{$vaccine->id}}" class="btn btn-primary">Edit</a>
                             <form action="/vaccine/{{$vaccine->id}}" style="display:inline;" method="post">
                                 @csrf
                                 @method('delete')
@@ -88,7 +88,6 @@
                 </div>
                 @endforeach
             </div>
-
         </div>
     </section>
 </body>

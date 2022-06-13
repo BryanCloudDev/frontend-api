@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class StateController extends Controller
 {
-    public function index($id){
+    public function store($id){
         $state = Http::get("http://127.0.0.1:8000/api/population/$id");
         return view("state_update",[
             "state" => $state->object()
@@ -16,10 +16,10 @@ class StateController extends Controller
 
     public function update(Request $request,$id){
         $request->validate([
-            "states" => "string",
-            "total_population" => "string",
-            "vaccinated_population" => "string",
-            "unvaccinated_population" => "string",
+            "states" => "min:2|string",
+            "total_population" => "min:2|string",
+            "vaccinated_population" => "min:2|string",
+            "unvaccinated_population" => "min:2|string",
         ]);
         $response = Http::put("http://127.0.0.1:8000/api/population/$id", $request->all());
         if($response->status() == 202){

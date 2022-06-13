@@ -36,9 +36,10 @@ Route::controller(CreateVaccine::class)->group(function()
 
 Route::get("/",[IndexController::class,"index"]);
 Route::post("/state/city",[StateController::class,"states"]);
-Route::get("/state/{id}",[StateController::class,"index"]);
+Route::get("/state/{id}",[StateController::class,"store"]);
 Route::post("/state/{id}",[StateController::class,"update"]);
-
+Route::get("/vaccine/{id}",[VaccineUpdate::class,"store"]);
+Route::put("/vaccine/{id}",[VaccineUpdate::class,"update"]);
 // Route::prefix('/')->group(function () {
 
 //     Route::get('signin', function () {

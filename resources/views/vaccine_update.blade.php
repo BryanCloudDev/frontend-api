@@ -20,29 +20,40 @@
                     <div class="form-box card text-dark">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
-
-                                <h1>Update Vaccine</h1>
-
-                                <form action="http://localhost/PHPexercises/API.php" method="GET">
-
+                                <h1>Update Vaccine {{$vaccine->vaccine_name}}</h1>
+                                <form action="/vaccine/{{$vaccine->id}}" method="post">
+                                @csrf
+                                @method('put')
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Name</label>
-                                        <input type="text" name="vaccineName" class="form-control form-control">
+                                        <input type="text" name="vaccine_name" class="form-control form-control" value="{{$vaccine->vaccine_name}}">
+                                        @error('vaccine_name')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
 
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Available Quantity</label>
-                                        <input type="text" name="availableQuantity" class="form-control form-control">
+                                        <input type="text" name="available_quantity" class="form-control form-control" value="{{$vaccine->available_quantity}}">
+                                        @error('available_quantity')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
 
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Type</label>
-                                        <input type="text" name="vaccineType" class="form-control form-control">
+                                        <input type="text" name="vaccine_type" class="form-control form-control" value="{{$vaccine->vaccine_type}}">
+                                        @error('vaccine_type')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
 
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Creator</label>
-                                        <input type="text" name="vaccineCreator" class="form-control form-control">
+                                        <input type="text" name="vaccine_creator" class="form-control form-control" value="{{$vaccine->vaccine_creator}}">
+                                        @error('vaccine_creator')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                     </div>
 
                                     <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Update</button>
