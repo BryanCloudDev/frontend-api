@@ -13,8 +13,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="create_vaccine"></div>
-    <script src="{{ asset('/js/main.js') }}"></script>
+    <section class="min-vh-100 gradient-custom d-flex align-items-center">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="form-box card text-dark">
+                        <div class="card-body p-5 text-center">
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <Title message="Create new vaccine"/>
+                                <form action="">
+                                    <Input :name="vaccineName" value="Vaccine name" />
+                                    <Input :name="availableQuantity" value="Available Quantity" />
+                                    <Input :name="vaccineType" value="Vaccine type" />
+                                    <Input :name="vaccineCreator" value="Vaccine Creator" />
+                                    <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Create</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div id="create_vaccine"></div>
+    <script src="{{ asset('/js/main.js') }}"></script> -->
     <!-- <script type="text/javascript"> window.csrf_token = "{{ csrf_token() }}"</script> -->
 </body>
 </html>

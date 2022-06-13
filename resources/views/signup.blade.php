@@ -13,8 +13,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="signup"></div>
-    <script src="{{ asset('/js/main.js') }}"></script>
+    <section class="min-vh-100 gradient-custom d-flex align-items-center">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="form-box card text-dark">
+                        <div class="card-body p-5 text-center">
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <form action="">
+                                    <Title message="Sign Up"/>
+                                    <Input :name="username" value="Username" />
+                                    <Input :name="password" value="Password" />
+                                    <p class="small mb-5 pb-lg-2"><a class="text-dark" href="#!">Forgot password?</a></p>
+                                    <button class="name-button bg-dark btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div id="signup"></div>
+    <script src="{{ asset('/js/main.js') }}"></script> -->
     <!-- <script type="text/javascript"> window.csrf_token = "{{ csrf_token() }}"</script> -->
 </body>
 </html>
