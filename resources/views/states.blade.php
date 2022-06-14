@@ -22,20 +22,12 @@
 h2 {
   color: white;
 }
-#testimonials {
-  background-color: #ef8172;
+.card-header {
+  color: #D11212;
+  font-weight:bold;
+  text-align: center;
 }
 
-.testimonial-text {
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-.testimonial-image {
-  width: 10%;
-  border-radius: 100%;
-  margin: 20px;
-}
 .card-body {
     background-color: #C6CCE0;
 }
@@ -102,7 +94,7 @@ h2 {
                 <div class="col-sm-3 mt-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-danger">{{$population->states}}</h5>
+                            <h5 class="card-header text-danger">{{$population->states}}</h5>
                             <dl>
                                 <dt>Total Population</dt>
                                 <dd>{{$population->total_population}}</dd>
