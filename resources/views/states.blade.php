@@ -122,7 +122,7 @@ h2 {
     </section>
     <div class="footer">
   <h2>Proyecto final</h2>
-  <p style="color:white">© Copyright 2022 Team #3</p>
+  <p style="color:white">© Copyright 2022 Team #3 KODIGO</p>
 </div>
 </body>
 </html>
