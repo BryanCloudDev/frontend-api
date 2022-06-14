@@ -26,7 +26,7 @@ class CreateVaccine extends Controller
             'vaccine_creator' => $data->vaccineCreator
         ]);
 
-        return redirect('/');
+        return redirect('vaccine');
     }
 
     public function destroy($id){
