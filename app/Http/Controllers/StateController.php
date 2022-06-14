@@ -23,7 +23,7 @@ class StateController extends Controller
         ]);
         $response = Http::put("http://127.0.0.1:8000/api/population/$id", $request->all());
         if($response->status() == 202){
-            return redirect("/")->with("message","Population updated succesfully");
+            return redirect("states")->with("message","Population updated succesfully");
         }
     }
 
