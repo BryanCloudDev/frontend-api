@@ -12,6 +12,34 @@
     <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
     <title>States</title>
 </head>
+<style>
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #000000;
+}
+h2 {
+  color: white;
+}
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+.card-body {
+    background-color: #C6CCE0;
+}
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -92,5 +120,9 @@
             </div>
         </div>
     </section>
+    <div class="footer">
+  <h2>Proyecto final</h2>
+  <p style="color:white">© Copyright 2022 Team #3</p>
+</div>
 </body>
 </html>

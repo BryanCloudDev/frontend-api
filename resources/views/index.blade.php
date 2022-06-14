@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
+<style>
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -58,5 +66,8 @@
             </div>
         </div>
     </nav>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 </body>
 </html>
