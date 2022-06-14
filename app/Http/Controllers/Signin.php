@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Http;
 class Signin extends Controller
 {
     function index(){
+        
+        if(session()->get('auth')){
+            return redirect('/');
+        }
+
         return view('signin');
     }
     
@@ -25,6 +30,7 @@ class Signin extends Controller
         $response = json_decode($response,true);
 
         if(isset($response['access_token'])){
+            session(['auth' => true]);
             return redirect('/');
         }
         elseif(isset($response['message'])){

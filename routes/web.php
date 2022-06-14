@@ -29,22 +29,31 @@ Route::controller(Signup::class)->group(function()
 
 Route::controller(CreateVaccine::class)->group(function()
 {
-    Route::post('/registerVaccine', 'register');
-    Route::get('/create_vaccine', 'index');
-    Route::delete("/vaccine/{id}","destroy");
+    Route::post('/registerVaccine', 'register')->middleware('Auth');
+    Route::get('/create_vaccine', 'index')->middleware('Auth');
+    Route::delete("/vaccine/{id}","destroy")->middleware('Auth');
 });
 
 Route::get("/",[IndexController::class,"index"]);
 
-Route::post("/state/city",[StateController::class,"states"]);
-Route::get("/state/{id}",[StateController::class,"store"]);
-Route::post("/state/{id}",[StateController::class,"update"]);
-Route::get("/vaccine/{id}",[VaccineUpdate::class,"store"]);
-Route::put("/vaccine/{id}",[VaccineUpdate::class,"update"]);
+Route::group(['prefix' => '/state', 'middleware' => ['Auth']] ,function ()
+{
+    Route::post("/city",[StateController::class,"states"]);
+    Route::get("/{id}",[StateController::class,"store"]);
+    Route::post("/{id}",[StateController::class,"update"]);
+});
+
+Route::group(['prefix' => '/vaccine', 'middleware' => ['Auth']] ,function ()
+{
+    Route::get("/{id}",[VaccineUpdate::class,"store"]);
+    Route::put("/{id}",[VaccineUpdate::class,"update"]);
+});
 
 Route::controller(CreatePopulation::class)->group(function()
 {
-    Route::post('/registerPopulation', 'register');
-    Route::get('/create_population', 'index');
-    Route::delete("/vaccine/{id}","destroy");
+    Route::post('/registerPopulation', 'register')->middleware('Auth');
+    Route::get('/create_population', 'index')->middleware('Auth');
+    Route::delete("/vaccine/{id}","destroy")->middleware('Auth');
 });
+
+Route::get('/signout',[Signout::class,'signOut'])->middleware('Auth');
