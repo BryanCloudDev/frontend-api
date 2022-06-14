@@ -28,7 +28,7 @@
                                         <input type="text" name="name" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">
-                                        <label class="form-label text-start">Username</label>
+                                        <label class="form-label text-start">Email</label>
                                         <input type="email" name="email" class="form-control form-control">
                                     </div>
                                     <div class="label form-outline form-white mb-4">

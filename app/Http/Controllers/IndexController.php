@@ -8,11 +8,18 @@ use Illuminate\Support\Facades\Http;
 class IndexController extends Controller
 {
     public function index(){
-        $populations = Http::get("http://127.0.0.1:8000/api/populations");
+        return view("index");
+    }
+    public function returnViewVaccines(){
         $vaccines = Http::get("http://127.0.0.1:8000/api/vaccines");
-        return view("index",[
-            "populations" => $populations->object(),
+        return view("vaccines",[
             "vaccines" => $vaccines->object(),
+        ]);
+    }
+    public function returnViewStates(){
+        $populations = Http::get("http://127.0.0.1:8000/api/populations");
+        return view("states",[
+            "populations" => $populations->object()
         ]);
     }
 }

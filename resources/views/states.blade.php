@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
+    <title>States</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -58,5 +58,35 @@
             </div>
         </div>
     </nav>
+    @php
+    if(session()->has("populations")){
+    $populations = session()->get("populations");
+    }
+    @endphp
+    <section class="gradient-custom d-flex align-items-center mt-5">
+        <div class="container py-5 h-100">
+            <div class="row">
+                <h2>States</h2>
+                @foreach($populations as $population)
+                <div class="col-sm-3 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">{{$population->states}}</h5>
+                            <dl>
+                                <dt>Total Population</dt>
+                                <dd>{{$population->total_population}}</dd>
+                                <dt>Vaccinated Population</dt>
+                                <dd>{{$population->vaccinated_population}}</dd>
+                                <dt>Unvaccinated Population</dt>
+                                <dd>{{$population->unvaccinated_population}}</dd>
+                            </dl>
+                            <a href="/state/{{$population->id}}" class="btn btn-primary">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 </body>
 </html>

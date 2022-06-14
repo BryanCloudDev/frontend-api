@@ -45,15 +45,21 @@ Route::group(['prefix' => '/state', 'middleware' => ['Auth']] ,function ()
 
 Route::group(['prefix' => '/vaccine', 'middleware' => ['Auth']] ,function ()
 {
-    Route::get("/{id}",[VaccineUpdate::class,"store"]);
-    Route::put("/{id}",[VaccineUpdate::class,"update"]);
+    Route::get("/{id}",[VaccineUpdate::class,'store']);
+    Route::put("/{id}",[VaccineUpdate::class,'update']);
+    Route::post('/deleteVaccine',[VaccineUpdate::class,'destroy']);
 });
 
 Route::controller(CreatePopulation::class)->group(function()
 {
     Route::post('/registerPopulation', 'register')->middleware('Auth');
     Route::get('/create_population', 'index')->middleware('Auth');
-    Route::delete("/vaccine/{id}","destroy")->middleware('Auth');
 });
 
 Route::get('/signout',[Signout::class,'signOut'])->middleware('Auth');
+
+Route::group(['prefix' => '/', 'middleware' => ['Auth']] ,function ()
+{
+    Route::get("vaccines",[IndexController::class,'returnViewVaccines']);
+    Route::get("states",[IndexController::class,'returnViewStates']);
+});
