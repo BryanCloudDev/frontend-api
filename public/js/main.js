@@ -20412,7 +20412,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Roboto', sans-serif;\n}\n\n.form-box {\n    border-radius: 1rem;\n    background-color: #f5f5f5;\n}\n\n.name-button{\n    text-transform: capitalize;\n}\n\n.label{\n    text-align: left;\n}\n\n.myError{\n    font-size: 12px;\n    margin: 12px 0px 12px 0px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Roboto', sans-serif;\n}\n\n.form-box {\n    border-radius: 1rem;\n    background-color: #f5f5f5;\n}\n\n.name-button{\n    text-transform: capitalize;\n}\n\n.label{\n    text-align: left;\n}\n\n.myError{\n    font-size: 12px;\n    margin: 12px 0px 12px 0px;\n}\n\n/*navbar*/\n\n.navbar-dark .nav-item .nav-link {\n    color: #fff;\n  }\n  \n  .navbar-dark .nav-item .nav-link:hover {\n    background-color: rgba(255, 255, 255, 0.1);\n    transition: all 0.3s ease;\n    border-radius: 0.25rem;\n    color: #fff;\n  }\n  \n  .fa-li {\n    position: relative;\n    left: 0;\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

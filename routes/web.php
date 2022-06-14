@@ -35,32 +35,16 @@ Route::controller(CreateVaccine::class)->group(function()
 });
 
 Route::get("/",[IndexController::class,"index"]);
+
 Route::post("/state/city",[StateController::class,"states"]);
 Route::get("/state/{id}",[StateController::class,"store"]);
 Route::post("/state/{id}",[StateController::class,"update"]);
 Route::get("/vaccine/{id}",[VaccineUpdate::class,"store"]);
 Route::put("/vaccine/{id}",[VaccineUpdate::class,"update"]);
-// Route::prefix('/')->group(function () {
 
-//     Route::get('signin', function () {
-//         return view('signin');
-//     });
-
-//     Route::get('signup', function () {
-//         return view('signup');
-//     });
-
-//     Route::get('vaccine_update', function () {
-//         return view('vaccine_update');
-//     });
-
-//     Route::get('state_update', function () {
-//         return view('state_update');
-//     });
-
-//     Route::get('create_vaccine', function () {
-//         return view('create_vaccine');
-//     });
-
-// });
-
+Route::controller(CreatePopulation::class)->group(function()
+{
+    Route::post('/registerPopulation', 'register');
+    Route::get('/create_population', 'index');
+    Route::delete("/vaccine/{id}","destroy");
+});
