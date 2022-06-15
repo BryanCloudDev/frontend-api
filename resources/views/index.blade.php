@@ -9,9 +9,8 @@
 </head>
 <body>
     @include('modules.navbar')
-    <div class="container-fluid">
-    @include('modules.ESmap')
-    </div>
+    <div class="container-fluid" id="app"></div>
     @include('modules.footer')
 </body>
+<script src="{{asset('../js/main.js')}}" defer></script>
 </html>

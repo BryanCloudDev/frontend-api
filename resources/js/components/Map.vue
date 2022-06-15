@@ -1,5 +1,7 @@
+<template>
+
 <svg class="img_mapaSV" viewBox="0 0 1920 1080" stroke-width="6">
-    <a href="santa-ana.html">
+    <a @click="sendRequest(3)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Santa Ana</p><p class='info_general'>Cabecera: Santa Ana.
             <br>Extensi&oacute;n Territorial: 2,023 km&#178;.<br>Fiestas Patronales: 17 al 26 de Julio.<br>Patrono: Se&ntilde;ora Santa Ana.
             <br>Poblaci&oacute;n Total: 523,655 Habitantes.<br>Densidad Poblacional: 258.83hab/km&#178;.</p>" d="m 503.92543,563.33208 c -0.70168,-0.8455 -0.85903,-3.5729 -0.43834,-7.5978 0.54696,-5.2331 1.14328,
@@ -53,7 +55,7 @@
             1.1021 4.34887,2.3785 3.42911,2.2739 5.26022,1.7873 3.09446,-0.8223 z" id="santa_ana">
         </path>
     </a>
-    <a href="ahuachapan.html">
+    <a @click="sendRequest(2)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Ahuachap&aacute;n</p><p class='info_general'>Cabecera: Ahuachap&aacute;n.
             <br>Extensi&oacute;n Territorial: 244.84 km&#178;.<br>Fiestas Patronales: 17 de Febrero al 5 de Marzo.<br>Patrono: Dulce Nombre de Jes&uacute;s.
             <br>Poblaci&oacute;n Total: 116,948 Habitantes.<br>Densidad Poblacional: 477.65hab/km&#178;.</p>" d="m 144.19384,638.46828 c 17.0954,-16.7439 20.31714,-19.5569 23.8213,-20.7986 4.48615,-1.5898 5.51267,-0.9249 9.95785,
@@ -88,7 +90,7 @@
             4.7554 11.11366,5.0733 28.81615,6.0005 2.76099,0.1446 4.30584,-0.8842 10.63253,-7.0808 z" id="ahuachapan">
         </path>
     </a>
-    <a href="sonsonate.html">
+    <a @click="sendRequest(1)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Sonsonate</p><p class='info_general'>Cabecera: Sonsonate.
             <br>Extensi&oacute;n Territorial: 232.53 km&#178;.<br>Fiestas Patronales: 25 de Febrero al 2 de Marzo.<br>Patrono: Virgen de Candelaria.
             <br>Poblaci&oacute;n Total: 110,501 Habitantes.<br>Densidad Poblacional: 307.6hab/km&#178;.</p>"
@@ -127,7 +129,7 @@
             -4.4287 38.01608,-2.3971 60.5,4.853 3.85,1.2414 7.52947,2.3218 8.17661,2.4008 0.64713,0.079 2.63773,-2.4438 4.42354,-5.6063 z" id="sonsonate">
         </path>
     </a>
-    <a href="la-libertad.html">
+    <a @click="sendRequest(4)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de La Libertad.</p><p class='info_general'>Cabecera: Santa Tecla.
             <br>Extensi&oacute;n Territorial: 1,653 km&#178;.<br>Fiestas Patronales: 1 al 8 de Diciembre.<br>Patrono: Inmaculada Concepci&oacute;n de Mar&iacute;a.
             <br>Poblaci&oacute;n Total: 842,624 Habitantes.<br>Densidad Poblacional: 509.79hab/km&#178;.</p>"
@@ -177,7 +179,7 @@
             id="la_libertad">
         </path>
     </a>
-    <a href="chalatenango.html">
+    <a @click="sendRequest(6)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Chalatenango</p><p class='info_general'>Cabecera: Chalatenango.
             <br>Extensi&oacute;n Territorial: 2,017 km&#178;.<br>Fiestas Patronales: 16 al 24 de Junio.<br>Patrono: San Juan Bautista.
             <br>Poblaci&oacute;n Total: 274,878 Habitantes.<br>Densidad Poblacional: 136.31hab/km&#178;.</p>" d="m 955.33097,449.71828 c 1.65005,-1.0928 4.31455,-1.9898 5.92125,-1.9934 3.0062,-0.01 6.5788,-2.43165 6.5788,-4.46535 0,
@@ -232,7 +234,7 @@
             -0.8981 4,-1.9908 z" id="chalatenango">
         </path>
     </a>
-    <a href="san-salvador.html">
+    <a @click="sendRequest(5)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de San Salvador</p><p class='info_general'>Capital de El Salvador.
             <br>Cabecera: San Salvador.<br>Extensi&oacute;n Territorial: 886.15 km&#178;.<br>Fiestas Patronales: 1 al 6 de Agosto.<br>Patrono: Divino Salvador del Mundo.
             <br>Poblaci&oacute;n Total: 2,266,387 Habitantes.<br>Densidad Poblacional: 2,557.42hab/km&#178;.</p>" d="m 711.23612,792.90548 c 3.76883,-7.4375 4.55003,-7.8098 11.87653,-5.6604 3.42008,1.0033 6.66832,2.1319 7.21832,2.508 2.0368,
@@ -272,7 +274,7 @@
             -4.8128 z" id="san_salvador">
         </path>
     </a>
-    <a href="cuscatlan.html">
+    <a @click="sendRequest(9)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Cuscatl&aacute;n</p><p class='info_general'>Cabecera: Cojutepeque.
             <br>Extensi&oacute;n Territorial: 756 km&#178;.<br>Fiestas Patronales: 3era y 4a Semana de Enero y 3era y 4a Semana de Agosto.<br>Patrono: San Sebasti&aacute;n M&aacute;rtir
             e Inmaculada Virgen de Concepci&oacute;n.
@@ -302,7 +304,7 @@
             1.1301 6.20846,2.2909 5.60403,2.6282 6.59441,2.6941 7.54405,0.5017 z" id="cuscatlan">
         </path>
     </a>
-    <a href="la-paz.html">
+    <a @click="sendRequest(7)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de La Paz</p><p class='info_general'>Cabecera: Zacatecoluca.
             <br>Extensi&oacute;n Territorial: 1,223.61 km&#178;.<br>Fiestas Patronales: 13 al 27 de Diciembre.<br>Patrono: Santa Luc&iacute;a, Nuestra Se&ntilde;ora de los Pobres.
             <br>Poblaci&oacute;n Total: 288,022 Habitantes.<br>Densidad Poblacional: 293.70hab/km&#178;.</p>" d="m 987.76019,962.96826 c 4.9716,-17.2894 14.40361,-30.1153 26.04721,-35.4193 3.5621,-1.6226 6.6385,-3.1123 6.8366,-3.3104 0.1981,
@@ -338,7 +340,7 @@
             -2.0921 1.89746,-4.7046 z" id="la_paz">
         </path>
     </a>
-    <a href="cabanas.html">
+    <a @click="sendRequest(8)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Caba&ntilde;as</p><p class='info_general'>Cabecera: Sensuntepeque.
             <br>Extensi&oacute;n Territorial: 1,103.51 km&#178;.<br>Fiestas Patronales: 25 de Noviembre al 5 de Diciembre.<br>
             Patrono: Santa B&aacute;rbara.
@@ -375,7 +377,7 @@
             1.4191 l 11.2618,0.067 -0.7449,-4.25 z" id="cabanas">
         </path>
     </a>
-    <a href="san-vicente.html">
+    <a @click="sendRequest(10)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de San Vicente</p><p class='info_general'>Cabecera: San Vicente.
             <br>Extensi&oacute;n Territorial: 1,184 km&#178;.<br>Fiestas Patronales: 12 al 31 de Diciembre.<br>Patrono: San Vicente Abad.
             <br>Poblaci&oacute;n Total: 230,205 Habitantes.<br>Densidad Poblacional: 194.43hab/km&#178;.</p>" d="m 1010.8254,979.96826 c 0,-0.4125 -0.4094,-2.325 -0.9029,-4.25 -2.2572,-8.8037 -2.2911,-8.5678 2.0152,-14.0158 2.5399,
@@ -413,7 +415,7 @@
             3.1771 z" id="san_vicente">
         </path>
     </a>
-    <a href="usulutan.html">
+    <a @click="sendRequest(11)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Usulut&aacute;n</p><p class='info_general'>Cabecera: Usulut&aacute;n.
             <br>Extensi&oacute;n Territorial: 2,130 km&#178;.<br>Fiestas Patronales: 17 al 26 de Noviembre.<br>Patrono: Santa Catarina de Alejandr&iacute;a.
             <br>Poblaci&oacute;n Total: 464,883 Habitantes.<br>Densidad Poblacional: 218.21hab/km&#178;.</p>" d="m 1473.3696,1047.5311 c 3.728,-2.0584 5.4341,-2.2053 28.9595,-2.4944 13.749,-0.1689 25.1112,-0.6471 25.2493,-1.0627 0.1382,
@@ -475,10 +477,10 @@
             9.1264 -3.3428,12.8847 -2.042,1.6917 -4.7251,3.3343 -5.9626,3.6503 -4.9754,1.2706 -1.7407,2.3575 7,2.3521 10.5022,-0.01 25.3756,
             1.4412 40.75,3.9664 5.775,0.9484 13.8408,1.8214 17.9239,1.9398 4.0832,0.1184 8.3118,0.6905 9.3969,1.2712 1.0852,0.5808 5.1694,
             1.2775 9.0761,1.5482 3.9067,0.2707 7.2906,0.6695 7.5198,0.8862 1.4145,1.3373 11.1042,
-            0.1489 14.6219,-1.7933 z" id="usulutan"">
+            0.1489 14.6219,-1.7933 z" id="usulutan">
         </path>
     </a>
-    <a href=" san-miguel.html">
+    <a @click="sendRequest(12)">
             <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de San Miguel</p><p class='info_general'>Cabecera: San Miguel.
         <br>Extensi&oacute;n Territorial: 2,077 km&#178;.<br>Fiestas Patronales: 21 de Noviembre.<br>Patrono: Nuestra Se&ntilde;ora de La Paz.
         <br>Poblaci&oacute;n Total: 546,022 Habitantes.<br>Densidad Poblacional: 262.88hab/km&#178;.</p>" d="m 1536.3499,1042.0234 c 0.8839,-1.2088 3.154,-1.8168 7.9158,-2.12 7.3924,-0.4708 8.7653,-1.5888 10.0513,-8.1851 0.3753,
@@ -536,7 +538,7 @@
         .2262 2.9451,0.073 z" id="san_miguel">
             </path>
     </a>
-    <a href="morazan.html">
+    <a @click="sendRequest(13)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de Moraz&aacute;n</p><p class='info_general'>Cabecera: San Francisco Gotera.
         <br>Extensi&oacute;n Territorial: 1,447 km&#178;.<br>Fiestas Patronales: 1 al 4 de Octubre.<br>Patrono: San Francisco de Asis.
         <br>Poblaci&oacute;n Total: 251,447 Habitantes.<br>Densidad Poblacional: 173.72hab/km&#178;.</p>" d="m 1585.1667,738.26708 c 12.5596,-0.7674 24.3027,-1.1572 26.0957,-0.8662 2.8836,0.4679 3.76,0 7.5883,-4.0887 2.516,-2.6845 5.859,
@@ -569,7 +571,7 @@
         -0.015 22.339,-0.6559 34.8986,-1.4232 z" id="morazan">
         </path>
     </a>
-    <a href="la-union.html">
+    <a @click="sendRequest(14)">
         <path class="departamentos_SV" title="<p class='titulo_central'>Departamento de La Uni&oacute;n</p><p class='info_general'>Cabecera: La Uni&oacute;n.
             <br>Extensi&oacute;n Territorial: 2074 km&#178;.<br>Fiestas Patronales: 1 al 15 de Diciembre.<br>Patrono: La Inmaculada Concepci&oacute;n de Mar&iacute;a.
             <br>Poblaci&oacute;n Total: 372,271 Habitantes.<br>Densidad Poblacional: 179.47hab/km&#178;.</p>" d="m 1698.3047,1051.7609 c 0.3254,-0.5266 -0.7062,-1.6286 -2.2926,-2.4489 -4.1442,-2.1431 -9.1811,-8.2483 -9.1811,
@@ -616,30 +618,19 @@
             id="la_union">
         </path>
     </a>
-    <a href="#">
-        <path class="departamentos_SV" title="<p class='titulo_central'>Isla Zacatillo (La Uni&oacute;n)</p><p class='info_general'>Ubicaci&oacute;n: 
-            Oc&eacute;ano Pac&iacute;fico (El Salvador).<br>Extensi&oacute;n Territorial: 4 km&#178;.<br>Golfo: Golfo de Fonseca.
-            <br>Poblaci&oacute;n Total: 2,000 Habitantes.</p>"
-            d="m 1820.6901,956.96121 c 0,-2.3474 0.9885,-4.2201 3.685,-6.9816 2.0268,-2.0756 3.4893,-3.9624 3.25,-4.1929 -0.2392,-0.2304 -2.685,-0.5762 -5.435,
-            -0.7683 l -5,-0.3494 -0.5845,6 c -0.6223,6.3873 0.2361,9.5 2.6197,9.5 0.982,0 1.4648,-1.0573 1.4648,-3.2078 z" id="isla_zacatillo">
-        </path>
-    </a>
-    <a href="#">
-        <path class="departamentos_SV"
-            title="<p class='titulo_central'>Isla Conchag&#252;ita (La Uni&oacute;n)</p><p class='info_general'>Ubicaci&oacute;n: 
-            Oc&eacute;ano Pac&iacute;fico (El Salvador).<br>Extensi&oacute;n Territorial: 8.45 km&#178;.<br>Cant&oacute;n: Isla de Conchag&#252;ita.</p>"
-            d="m 1818.9401,1014.3156 c 2.5301,-5.4965 2.2636,-7.9838 -1,-9.3328 -1.5125,-0.6252 -3.0027,-1.0923 -3.3116,-1.038 -0.3088,0.054 -2.2237,
-            -0.2763 -4.2553,-0.7345 -3.426,-0.7726 -5.439,-0.1305 -4.0246,1.2839 0.3322,0.3323 0.6996,2.1765 0.8162,4.0984 0.2518,4.1474 1.797,
-            6.2397 5.9568,8.0661 4.1412,1.8182 3.8489,1.9359 5.8185,-2.3431 z" id="isla_conchaguita">
-        </path>
-    </a>
-    <a href="#">
-        <path class="departamentos_SV" title="<p class='titulo_central'>Isla Meanguera del Golfo (La Uni&oacute;n)</p><p class='info_general'>Ubicaci&oacute;n: 
-            Oc&eacute;ano Pac&iacute;fico (El Salvador).<br>Extensi&oacute;n Territorial: 25.13 km&#178;.<br>Golfo: Golfo de Fonseca.
-            <br>Poblaci&oacute;n Total: 2,398 Habitantes.</p>"
-            d="m 1866.0432,1056.3314 c 1.5568,-1.7202 1.5347,-1.9539 -0.345,-3.655 -1.3553,-1.2265 -2.0081,-3.082 -2.0081,-5.7081 0,-2.1399 -1.1636,-7.485 -2.5857,
-            -11.8781 -2.9546,-9.127 -5.1233,-11.227 -11.0879,-10.7361 l -3.8264,0.3149 -0.2881,9.2938 c -0.2511,8.1009 -0.026,9.6264 1.75,11.8849 1.2916,
-            1.6421 2.0381,4.08 2.0381,6.6563 0,3.1617 0.2667,3.7984 1.2,2.8651 1.837,-1.837 6.6931,-1.4292 9.5271,0.8 3.1223,2.456 3.5394,2.468 5.626,0.1623 z">
-        </path>
-    </a>
 </svg>
+
+</template>
+
+<script>
+
+export default {
+    name:'Map',
+    methods:{
+        sendRequest(id){
+            this.$emit('idSet',id);
+        }
+    }
+}
+
+</script>
