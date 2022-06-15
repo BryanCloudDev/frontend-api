@@ -20412,7 +20412,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Roboto', sans-serif;\n}\n\n.form-box {\n    border-radius: 1rem;\n    background-color: #f5f5f5;\n}\n\n.name-button{\n    text-transform: capitalize;\n}\n\n.label{\n    text-align: left;\n}\n\n.myError{\n    font-size: 12px;\n    margin: 12px 0px 12px 0px;\n}\n\n\n.footer {\n    padding: 20px;\n    text-align: center;\n    background: #000000;\n}\n\n.footer h2{\n    color:#fff;\n}\n\n.card-header-color {\n    color: #D11212;\n    font-weight:bold;\n    text-align: center;\n}\n\n.card-body-color {\n    background-color: #C6CCE0;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Roboto', sans-serif;\n}\n\n.form-box {\n    border-radius: 1rem;\n    background-color: #f5f5f5;\n}\n\n.name-button{\n    text-transform: capitalize;\n}\n\n.label{\n    text-align: left;\n}\n\n.myError{\n    font-size: 12px;\n    margin: 12px 0px 12px 0px;\n}\n\n\n.footer {\n    padding: 20px;\n    text-align: center;\n    background: #000000;\n}\n\n.footer h2{\n    color:#fff;\n}\n\n.card-header-color {\n    color: #D11212;\n    font-weight:bold;\n    text-align: center;\n}\n\n.card-body-color {\n    background-color: #C6CCE0;\n}\n\npath.departamentos_SV {\n    fill: #424242;\n    stroke: #ffffff;\n    transition: all 0.7s;\n}\n\npath.departamentos_SV:hover {\n    fill: #6e6e6e;\n    stroke: #0984e3;\n    transition: all 0.7s;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

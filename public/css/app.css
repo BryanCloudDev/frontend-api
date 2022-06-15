@@ -40,3 +40,15 @@ body{
 .card-body-color {
     background-color: #C6CCE0;
 }
+
+path.departamentos_SV {
+    fill: #424242;
+    stroke: #ffffff;
+    transition: all 0.7s;
+}
+
+path.departamentos_SV:hover {
+    fill: #6e6e6e;
+    stroke: #0984e3;
+    transition: all 0.7s;
+}

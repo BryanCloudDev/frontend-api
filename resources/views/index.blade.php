@@ -9,6 +9,9 @@
 </head>
 <body>
     @include('modules.navbar')
+    <div class="container-fluid">
+    @include('modules.ESmap')
+    </div>
     @include('modules.footer')
 </body>
 </html>
