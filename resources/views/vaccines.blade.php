@@ -44,7 +44,11 @@
                 @endforeach
             </div>
         </div>
+<<<<<<< HEAD
     </section>  
     @include('modules.footer')  
+=======
+    </section>
+>>>>>>> 2755d5e68f97769251d6440221638a68168586c7
 </body>
 </html>

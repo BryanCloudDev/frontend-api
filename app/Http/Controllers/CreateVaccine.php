@@ -26,13 +26,13 @@ class CreateVaccine extends Controller
             'vaccine_creator' => $data->vaccineCreator
         ]);
 
-        return redirect('/');
+        return redirect('vaccine');
     }
 
     public function destroy($id){
         $response = Http::delete("http://127.0.0.1:8000/api/vaccines/$id");
         if($response->status() == 200){
-            return redirect("/");
+            return redirect("vaccine");
         }
     }
 }
