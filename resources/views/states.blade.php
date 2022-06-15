@@ -7,6 +7,17 @@
     <title>States</title>
     @include('modules.head')
 </head>
+<style>
+
+.card-body-color {
+    background-color: #C6CCE0;
+    border-style: solid;
+    border-width: 4px 4px 4px 4px;
+    border-color: black;
+    border-radius: 0.3rem;
+}
+
+</style>
 <body>
     @include('modules.navbar')
     @php
