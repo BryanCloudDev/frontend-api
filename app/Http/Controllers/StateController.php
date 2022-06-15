@@ -14,8 +14,6 @@ class StateController extends Controller
         ]);
     }
 
-<<<<<<< HEAD
-=======
     public function update(Request $request,$id){
         $request->validate([
             "states" => "min:2|string",
@@ -29,7 +27,6 @@ class StateController extends Controller
         }
     }
 
->>>>>>> 2755d5e68f97769251d6440221638a68168586c7
     public function states(Request $request){
         $states = Http::get("http://127.0.0.1:8000/api/population/states/{$request->city}");
         if($states->status() == 200){

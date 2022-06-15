@@ -23,6 +23,22 @@
                     <li class="nav-item">
                             <a class="nav-link" href="/vaccines">Vaccines</a>
                     </li>
+                    @if(session()->has('auth'))
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#" 
+                        id="navbarDropdown" 
+                        role="button"
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
+                        Actions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/create_vaccine">Create Vaccine Register</a></li>
+                            <li><a class="dropdown-item" href="/create_population">Create Population Register</a></li>
+                        </ul>
+                    </li>
+                    @endif
                 </ul>
                 <form class="d-flex" method="post" action="/state/city">
                     @csrf
