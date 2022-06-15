@@ -36,7 +36,8 @@ Route::controller(CreateVaccine::class)->group(function()
 Route::get('/',[IndexController::class,'index']);
 
 Route::group(['prefix' => '/state', 'middleware' => ['Auth']] ,function ()
-{
+{   
+    Route::get('/{id}',[PopulationUpdate::class,'get']);
     Route::post('/update',[PopulationUpdate::class,'update']);
     Route::post('/deleteState',[PopulationUpdate::class,'destroy']);
 });
@@ -45,7 +46,8 @@ Route::post('state/city',[StateController::class,'states']);
 
 Route::group(['prefix' => '/vaccine', 'middleware' => ['Auth']] ,function ()
 {
-    Route::put('/{id}',[VaccineUpdate::class,'update']);
+    Route::get('/{id}',[VaccineUpdate::class,'get']);
+    Route::post('/update',[VaccineUpdate::class,'update']);
     Route::post('/deleteVaccine',[VaccineUpdate::class,'destroy']);
 });
 

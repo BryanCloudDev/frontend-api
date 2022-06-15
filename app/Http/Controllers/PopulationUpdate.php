@@ -27,4 +27,11 @@ class PopulationUpdate extends Controller
         Http::delete("http://127.0.0.1:8000/api/population/{$data->id}");
         return redirect('states')->with('response', 'Population succesfully deleted!');
     }
+
+    public function get($id){
+        $population = Http::get("http://127.0.0.1:8000/api/population/$id");
+        return view("state_update",[
+            "state" => $population->object()
+        ]);
+    }
 }
