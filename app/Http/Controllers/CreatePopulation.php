@@ -19,13 +19,13 @@ class CreatePopulation extends Controller
             'vaccinated_population' => 'required|numeric'
         ]);
 
-        $response = Http::asForm()->post('http://127.0.0.1:8000/api/population',[
+        Http::asForm()->post('http://127.0.0.1:8000/api/population',[
             'states' => $data->state,
             'total_population' => $data->total_population,
             'unvaccinated_population' => $data->unvaccinated_population,
             'vaccinated_population' => $data->vaccinated_population
         ]);
 
-        return redirect('/');
+        return redirect('/states')->with('response', 'Register succesfully created!');
     }
 }

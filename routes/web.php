@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the 'web' middleware group. Now create something great!
 |
 */
 
@@ -33,19 +33,19 @@ Route::controller(CreateVaccine::class)->group(function()
     Route::get('/create_vaccine', 'index')->middleware('Auth');
 });
 
-Route::get("/",[IndexController::class,"index"]);
+Route::get('/',[IndexController::class,'index']);
 
 Route::group(['prefix' => '/state', 'middleware' => ['Auth']] ,function ()
 {
-    Route::post("/city",[StateController::class,"states"]);
-    Route::get("/{id}",[StateController::class,"store"]);
-    Route::post("/update",[PopulationUpdate::class,"update"]);
+    Route::post('/update',[PopulationUpdate::class,'update']);
+    Route::post('/deleteState',[PopulationUpdate::class,'destroy']);
 });
+
+Route::post('state/city',[StateController::class,'states']);
 
 Route::group(['prefix' => '/vaccine', 'middleware' => ['Auth']] ,function ()
 {
-    Route::get("/{id}",[VaccineUpdate::class,'store']);
-    Route::put("/{id}",[VaccineUpdate::class,'update']);
+    Route::put('/{id}',[VaccineUpdate::class,'update']);
     Route::post('/deleteVaccine',[VaccineUpdate::class,'destroy']);
 });
 
@@ -57,8 +57,8 @@ Route::controller(CreatePopulation::class)->group(function()
 
 Route::get('/signout',[Signout::class,'signOut'])->middleware('Auth');
 
-Route::group(['prefix' => '/', 'middleware' => ['Auth']] ,function ()
+Route::group(['prefix' => '/'],function ()
 {
-    Route::get("vaccines",[IndexController::class,'returnViewVaccines']);
-    Route::get("states",[IndexController::class,'returnViewStates']);
+    Route::get('vaccines',[IndexController::class,'returnViewVaccines']);
+    Route::get('states',[IndexController::class,'returnViewStates']);
 });

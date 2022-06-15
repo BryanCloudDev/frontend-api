@@ -21,6 +21,12 @@
                 <p class="text-bg-danger p-3 container fs-5 fw-semibold text-light rounded text-center">There are not states found, consult your state again</p>
                 @else
                 <h2>States</h2>
+                @if(session('response'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{session('response')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                @endif
                 @foreach($populations as $population)
                 <div class="col-sm-3 mt-4">
                     <div class="card">
@@ -34,7 +40,14 @@
                                 <dt>Unvaccinated Population</dt>
                                 <dd>{{$population->unvaccinated_population}}</dd>
                             </dl>
+                            @if(session()->has('auth'))
                             <a href="/state/{{$population->id}}" class="btn btn-primary">Edit</a>
+                            <form action="/state/deleteState" style="display:inline;" method="post">
+                                <input type="hidden" name="id" value="{{$population->id}}">
+                                @csrf
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                            @endif
                         </div>
                     </div>
                 </div>

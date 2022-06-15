@@ -18,13 +18,13 @@ class PopulationUpdate extends Controller
 
         $response = Http::put("http://127.0.0.1:8000/api/population/{$request->id}", $request->all());
         if($response->status() == 202){
-            return redirect("/states")->with("message","Population updated succesfully");
+            return redirect('/states')->with('message','Population updated succesfully');
         }
     }
 
     public function destroy(Request $data){
         $data->validate(['id' => 'numeric']);
-        Http::delete("http://127.0.0.1:8000/api/vaccines/{$data->id}");
-        return redirect('vaccines')->with('response', 'Register succesfully deleted!');
+        Http::delete("http://127.0.0.1:8000/api/population/{$data->id}");
+        return redirect('states')->with('response', 'Population succesfully deleted!');
     }
 }

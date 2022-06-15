@@ -11,31 +11,6 @@ class VaccineUpdate extends Controller
         return view('create_vaccine');
     }
 
-    function register(Request $data){
-        $data->validate([
-            'vaccineName' => 'required|alpha_num|max:20|min:5',
-            'availableQuantity' => 'required|numeric',
-            'vaccineType' => 'required|alpha_num|max:20|min:5',
-            'vaccineCreator' => 'required|string|max:20|min:5'
-        ]);
-
-        $response = Http::asForm()->post('http://127.0.0.1:8000/api/vaccines',[
-            'vaccine_name' => $data->vaccineName,
-            'available_quantity' => $data->availableQuantity,
-            'vaccine_type' => $data->vaccineType,
-            'vaccine_creator' => $data->vaccineCreator
-        ]);
-
-        return redirect('/');
-    }
-
-    public function store($id){
-        $vaccine = Http::get("http://127.0.0.1:8000/api/vaccines/$id");
-        return view("vaccine_update",[
-            "vaccine" => $vaccine->object()
-        ]);
-    }
-
     public function update(Request $request, $id){
         $request->validate([
             "vaccine_name" => "min:2|string",
@@ -45,12 +20,12 @@ class VaccineUpdate extends Controller
         ]);
         $response = Http::put("http://127.0.0.1:8000/api/vaccines/$id",$request->all());
         if($response->status() == 202){
-            return redirect("/vaccines")->with('response', 'Register succesfully updated!');
+            return redirect("/vaccines")->with('response', 'Vaccine succesfully updated!');
         }
     }
     public function destroy(Request $data){
         $data->validate(['id' => 'numeric']);
         Http::delete("http://127.0.0.1:8000/api/vaccines/{$data->id}");
-        return redirect('vaccines')->with('response', 'Register succesfully deleted!');
+        return redirect('vaccines')->with('response', 'Vaccine succesfully deleted!');
     }
 }

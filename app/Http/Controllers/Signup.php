@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\Redirect;
 class Signup extends Controller
 {
     function index(){
-
         if(session()->get('auth')){
             return redirect('/');
         }
-        
         return view('signup');
     }
 

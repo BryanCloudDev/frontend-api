@@ -32,12 +32,14 @@
                                 <dt>Vaccine Creator</dt>
                                 <dd>{{$vaccine->vaccine_creator}}</dd>
                             </dl>
+                            @if(session()->has('auth'))
                             <a href="/vaccine/{{$vaccine->id}}" class="btn btn-primary">Edit</a>
                             <form action="/vaccine/deleteVaccine" style="display:inline;" method="post">
                                 <input type="hidden" name="id" value="{{$vaccine->id}}">
                                 @csrf
                                 <button class="btn btn-danger">Delete</button>
                             </form>
+                            @endif
                         </div>
                     </div>
                 </div>
