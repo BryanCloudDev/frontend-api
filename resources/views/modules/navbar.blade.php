@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__fadeIn">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{url('/')}}">
                 <svg width="50" height="50" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

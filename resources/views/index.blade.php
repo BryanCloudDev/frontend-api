@@ -9,7 +9,7 @@
 </head>
 <body>
     @include('modules.navbar')
-    <div class="container-fluid" id="app"></div>
+    <div class="mapMaxSize container animate__animated animate__fadeInDown" id="app"></div>
     @include('modules.footer')
 </body>
 <script src="{{asset('../js/main.js')}}" defer></script>

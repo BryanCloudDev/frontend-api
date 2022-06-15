@@ -10,7 +10,7 @@
 <body>
     @include('modules.navbar')
     <section class="gradient-custom d-flex align-items-center mt-5">
-        <div class="container py-5 h-100">
+        <div class="container py-5 h-100 animate__animated animate__fadeInDown">
             <div class="row">
                 <h2>Vaccines</h2>
                 @if(session('response'))

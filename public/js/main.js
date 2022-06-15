@@ -19597,7 +19597,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    event: function event(id) {
+    retrieveData: function retrieveData(id) {
       var _this = this;
 
       axios.get("http://127.0.0.1:8000/api/population/".concat(id)).then(function (response) {
@@ -19660,7 +19660,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Map = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Map");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Map, {
-    onIdSet: $options.event
+    onIdSet: $options.retrieveData
   }, null, 8
   /* PROPS */
   , ["onIdSet"]), $data.success ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "State name: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.states), 1

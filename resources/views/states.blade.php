@@ -15,7 +15,7 @@
     }
     @endphp
     <section class="gradient-custom d-flex align-items-center mt-5">
-        <div class="container py-5 h-100">
+        <div class="container py-5 h-100 animate__animated animate__fadeInDown">
             <div class="row">
                 @if(count($populations) == 0)
                 <p class="text-bg-danger p-3 container fs-5 fw-semibold text-light rounded text-center">There are not states found, consult your state again</p>

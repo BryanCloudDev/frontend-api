@@ -20,8 +20,6 @@ body{
     margin: 12px 0px 12px 0px;
 }
 
-
-
 .footer {
     padding: 20px;
     text-align: center;
@@ -52,4 +50,12 @@ path.departamentos_SV:hover {
     fill: #6e6e6e;
     stroke: #0984e3;
     transition: all 0.7s;
+}
+
+nav{
+    z-index: 1;
+}
+
+.mapMaxSize{
+    max-width: 800px;
 }

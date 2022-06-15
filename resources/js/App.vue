@@ -1,6 +1,6 @@
 <template>
 
-<Map v-on:idSet="event"/>
+<Map v-on:idSet="retrieveData"/>
 
 <div v-if="success">
     este es un test papus
@@ -31,7 +31,7 @@ export default{
         }
     },
     methods:{
-        event(id){
+        retrieveData(id){
             axios
             .get(`http://127.0.0.1:8000/api/population/${id}`)
             .then( response => {
