@@ -17,7 +17,7 @@
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
                                 <h2 class="fw-bold mb-2 text-uppercase">Create New Vaccine</h2>
-                                <form action="http://127.0.0.1:8001/registerVaccine" method="post">
+                                <form action="/registerVaccine" method="post">
                                     @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Vaccine Name</label>

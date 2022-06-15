@@ -16,7 +16,7 @@
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
                                 <h2 class="fw-bold mb-2 text-uppercase">Sign In</h2>
-                                <form action="http://127.0.0.1:8001/signin" method="post">
+                                <form action="/signin" method="post">
                                     @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Email</label>
@@ -47,7 +47,7 @@
                             <div>
                                 <p class="mb-0">
                                     Don't have an account?
-                                    <a href="http://127.0.0.1:8001/signup" class="text-dark fw-bold">Sign up!</a>
+                                    <a href="/signup" class="text-dark fw-bold">Sign up!</a>
                                 </p>
                             </div>
                         </div>

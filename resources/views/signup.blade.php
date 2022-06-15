@@ -16,7 +16,7 @@
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
                                 <h2 class="fw-bold mb-2 text-uppercase">Sign up</h2>
-                                <form action="http://127.0.0.1:8001/register" method="post">
+                                <form action="/register" method="post">
                                     @csrf
                                     <div class="label form-outline form-white mb-4">
                                         <label class="form-label text-start">Name</label>
