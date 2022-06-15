@@ -31,7 +31,6 @@ Route::controller(CreateVaccine::class)->group(function()
 {
     Route::post('/registerVaccine', 'register')->middleware('Auth');
     Route::get('/create_vaccine', 'index')->middleware('Auth');
-    Route::delete("/vaccine/{id}","destroy")->middleware('Auth');
 });
 
 Route::get("/",[IndexController::class,"index"]);
@@ -40,7 +39,7 @@ Route::group(['prefix' => '/state', 'middleware' => ['Auth']] ,function ()
 {
     Route::post("/city",[StateController::class,"states"]);
     Route::get("/{id}",[StateController::class,"store"]);
-    Route::post("/{id}",[StateController::class,"update"]);
+    Route::post("/update",[PopulationUpdate::class,"update"]);
 });
 
 Route::group(['prefix' => '/vaccine', 'middleware' => ['Auth']] ,function ()
