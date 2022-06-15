@@ -7,11 +7,6 @@
     <title>States</title>
     @include('modules.head')
 </head>
-<style>
- body {
-  background-color: lightsteelblue;
-}
-    </style>
 <body>
     @include('modules.navbar')
     @php
