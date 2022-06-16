@@ -19593,7 +19593,9 @@ __webpack_require__.r(__webpack_exports__);
       total_population: '',
       unvaccinated_population: '',
       vaccinated_population: '',
-      success: false
+      success: false,
+      animate__backInLeft: false,
+      animate__fadeIn: false
     };
   },
   methods: {
@@ -19606,9 +19608,16 @@ __webpack_require__.r(__webpack_exports__);
         _this.unvaccinated_population = response.data.unvaccinated_population;
         _this.vaccinated_population = response.data.vaccinated_population;
         _this.success = true;
+        _this.animate__backInLeft = true;
+        _this.animate__backInDown = true;
+        setTimeout(_this.removeClass, 900);
       })["catch"](function (error) {
         console.log(error);
       });
+    },
+    removeClass: function removeClass() {
+      this.animate__backInLeft = false;
+      this.animate__backInDown = false;
     }
   }
 });
@@ -19657,38 +19666,24 @@ var _hoisted_2 = {
   "class": "col-sm-4 mt-4"
 };
 var _hoisted_3 = {
-  "class": "card cCard p-3 card-body-color animate__fadeIn animate__animated"
+  "class": "card cCard p-3 card-body-color animate__animated animate__fadeIn"
 };
 var _hoisted_4 = {
   "class": "card-body card-body-custom"
 };
 var _hoisted_5 = {
-  "class": "card-header-color text-light animate__animated animate__backInDown"
-};
-var _hoisted_6 = {
   "class": "text-light"
 };
-var _hoisted_7 = {
-  "class": "cRow animate__animated animate__backInLeft"
-};
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, "Total Population", -1
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, "Total Population", -1
 /* HOISTED */
 );
 
-var _hoisted_9 = {
-  "class": "cRow animate__animated animate__backInLeft"
-};
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, "Vaccinated Population", -1
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, "Vaccinated Population", -1
 /* HOISTED */
 );
 
-var _hoisted_11 = {
-  "class": "cRow animate__animated animate__backInLeft"
-};
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, "Unvaccinated Population", -1
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", null, "Unvaccinated Population", -1
 /* HOISTED */
 );
 
@@ -19699,15 +19694,37 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onIdSet: $options.retrieveData
   }, null, 8
   /* PROPS */
-  , ["onIdSet"]), $data.success ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.states), 1
+  , ["onIdSet"]), $data.success ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["card-header-color text-light animate__animated", {
+      animate__backInDown: _ctx.animate__backInDown
+    }])
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.states), 3
+  /* TEXT, CLASS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["cRow animate__animated", {
+      animate__backInLeft: $data.animate__backInLeft
+    }])
+  }, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.total_population), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.total_population), 1
+  )], 2
+  /* CLASS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["cRow animate__animated", {
+      animate__backInLeft: $data.animate__backInLeft
+    }])
+  }, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.unvaccinated_population), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.unvaccinated_population), 1
+  )], 2
+  /* CLASS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["cRow animate__animated", {
+      animate__backInLeft: $data.animate__backInLeft
+    }])
+  }, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.vaccinated_population), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.vaccinated_population), 1
-  /* TEXT */
-  )])])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
+  )], 2
+  /* CLASS */
+  )])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
   /* STABLE_FRAGMENT */
   );
 }

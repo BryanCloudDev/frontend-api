@@ -5,20 +5,20 @@
 <div v-if="success">
 
 <div class="col-sm-4 mt-4">
-    <div class="card cCard p-3 card-body-color animate__fadeIn animate__animated">
+    <div class="card cCard p-3 card-body-color animate__animated animate__fadeIn">
         <div class="card-body card-body-custom">
-            <h5 class="card-header-color text-light animate__animated animate__backInDown">{{states}}</h5>
+            <h5 class="card-header-color text-light animate__animated" v-bind:class="{animate__backInDown}">{{states}}</h5>
             <ul class="text-light">
-                <li class="cRow animate__animated animate__backInLeft">
+                <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
                     <dt>Total Population</dt>
                     <dd>{{total_population}}</dd>
                 </li>
                 
-                <li class="cRow animate__animated animate__backInLeft">
+                <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
                     <dt>Vaccinated Population</dt>
                     <dd>{{unvaccinated_population}}</dd>
                 </li>
-                <li class="cRow animate__animated animate__backInLeft">
+                <li class="cRow animate__animated " v-bind:class="{animate__backInLeft}">
                     <dt>Unvaccinated Population</dt>
                     <dd>{{vaccinated_population}}</dd>
                 </li>
@@ -46,6 +46,8 @@ export default{
             unvaccinated_population: '',
             vaccinated_population: '',
             success: false,
+            animate__backInLeft:false,
+            animate__fadeIn:false
         }
     },
     methods:{
@@ -58,10 +60,17 @@ export default{
                 this.unvaccinated_population = response.data.unvaccinated_population;
                 this.vaccinated_population = response.data.vaccinated_population;
                 this.success = true;
+                this.animate__backInLeft = true;
+                this.animate__backInDown = true;
+                setTimeout(this.removeClass, 900);
             })
             .catch( error => {
                 console.log(error);
             });
+        },
+        removeClass(){
+            this.animate__backInLeft = false;
+            this.animate__backInDown = false;
         }
     }
 }
