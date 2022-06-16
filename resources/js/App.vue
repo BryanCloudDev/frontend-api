@@ -18,7 +18,7 @@
                         <dt>Vaccinated Population</dt>
                         <dd>{{unvaccinated_population}}</dd>
                     </li>
-                    <li class="cRow animate__animated " v-bind:class="{animate__backInLeft}">
+                    <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
                         <dt>Unvaccinated Population</dt>
                         <dd>{{vaccinated_population}}</dd>
                     </li>

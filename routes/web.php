@@ -63,4 +63,5 @@ Route::group(['prefix' => '/'],function ()
 {
     Route::get('vaccines',[IndexController::class,'returnViewVaccines']);
     Route::get('states',[IndexController::class,'returnViewStates']);
+    Route::get('pdf',[PDFGeneratorController::class,'index']);
 });

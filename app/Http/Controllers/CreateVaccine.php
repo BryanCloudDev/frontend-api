@@ -13,10 +13,10 @@ class CreateVaccine extends Controller
 
     function register(Request $data){
         $data->validate([
-            'vaccineName' => 'required|alpha_num|max:20',
+            'vaccineName' => 'required|max:20',
             'availableQuantity' => 'required|numeric',
-            'vaccineType' => 'required|alpha_num|max:20',
-            'vaccineCreator' => 'required|string|max:20'
+            'vaccineType' => 'required|max:20',
+            'vaccineCreator' => 'required|string'
         ]);
 
         Http::asForm()->post('http://127.0.0.1:8000/api/vaccines',[
