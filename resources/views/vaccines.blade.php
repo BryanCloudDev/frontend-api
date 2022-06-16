@@ -26,7 +26,7 @@
                             <h5 class="card-header-color">{{$vaccine->vaccine_name}}</h5>
                             <dl>
                                 <dt>Available Quantity</dt>
-                                <dd>{{$vaccine->available_quantity}}</dd>
+                                <dd>{{number_format($vaccine->available_quantity,0,',')}}</dd>
                                 <dt>Vaccine Type</dt>
                                 <dd>{{$vaccine->vaccine_type}}</dd>
                                 <dt>Vaccine Creator</dt>

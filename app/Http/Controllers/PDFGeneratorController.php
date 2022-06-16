@@ -30,7 +30,7 @@ class PDFGeneratorController extends Controller
     {
         $this->fpdf->AddPage('P','A4');        
         $this->fpdf->SetFont('Arial', 'B', 15);
-        $this->fpdf->Image('https://i.imgur.com/vZjMsVd.png',0,0,212,55,'PNG');
+        $this->fpdf->Image(public_path('hero.png'),0,0,212,55,'PNG');
         $this->fpdf->Ln(50);
         $this->fpdf->Cell(0, 10, 'Table of states: ', 0, 1);
         $this->fpdf->Ln();

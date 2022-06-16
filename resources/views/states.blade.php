@@ -34,11 +34,11 @@
                             <h5 class="card-header-color">{{$population->states}}</h5>
                             <dl>
                                 <dt>Total Population</dt>
-                                <dd>{{$population->total_population}}</dd>
+                                <dd>{{number_format($population->total_population,'0',',')}}</dd>
                                 <dt>Vaccinated Population</dt>
-                                <dd>{{$population->vaccinated_population}}</dd>
+                                <dd>{{number_format($population->vaccinated_population,0,',');}}</dd>
                                 <dt>Unvaccinated Population</dt>
-                                <dd>{{$population->unvaccinated_population}}</dd>
+                                <dd>{{number_format($population->unvaccinated_population,0,',')}}</dd>
                             </dl>
                             @if(session()->has('auth'))
                             <a href="/state/{{$population->id}}" class="btn btn-primary">Edit</a>
