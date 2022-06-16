@@ -22,8 +22,8 @@
                 @foreach($vaccines as $vaccine)
                 <div class="col-sm-3 mt-4">
                     <div class="card">
-                        <div class="card-body card-body-color">
-                            <h5 class="card-header-color text-danger">{{$vaccine->vaccine_name}}</h5>
+                        <div class="card-body">
+                            <h5 class="card-header-color">{{$vaccine->vaccine_name}}</h5>
                             <dl>
                                 <dt>Available Quantity</dt>
                                 <dd>{{$vaccine->available_quantity}}</dd>

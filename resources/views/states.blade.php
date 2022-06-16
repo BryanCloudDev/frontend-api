@@ -30,8 +30,8 @@
                 @foreach($populations as $population)
                 <div class="col-sm-3 mt-4">
                     <div class="card">
-                        <div class="card-body card-body-color">
-                            <h5 class="card-header-color text-danger">{{$population->states}}</h5>
+                        <div class="card-body">
+                            <h5 class="card-header-color">{{$population->states}}</h5>
                             <dl>
                                 <dt>Total Population</dt>
                                 <dd>{{$population->total_population}}</dd>
