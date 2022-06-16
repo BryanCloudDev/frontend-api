@@ -21,12 +21,6 @@ body{
     margin: 12px 0px 12px 0px;
 }
 
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #000000;
-}
-
 .footer h2{
     color:#fff;
 }
@@ -79,4 +73,8 @@ ul{
 .cRow{
     list-style: none;
     margin: 0px;
+}
+
+.depCard{
+    width: 50%;
 }

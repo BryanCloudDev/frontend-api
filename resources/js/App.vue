@@ -2,30 +2,36 @@
 
 <Map v-on:idSet="retrieveData"/>
 
-<div v-if="success">
+<div class="container-fluid p-4 d-flex justify-content-center">
+    <div v-if="success" class="depCard">
+        <div class="card cCard p-3 card-body-color animate__animated animate__fadeIn">
+            <div class="card-body card-body-custom">
+                <h5 class="card-header-color text-light animate__animated" v-bind:class="{animate__backInDown}">
+                    {{states}}</h5>
+                <ul class="text-light">
+                    <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
+                        <dt>Total Population</dt>
+                        <dd>{{total_population}}</dd>
+                    </li>
 
-<div class="col-sm-4 mt-4">
-    <div class="card cCard p-3 card-body-color animate__animated animate__fadeIn">
-        <div class="card-body card-body-custom">
-            <h5 class="card-header-color text-light animate__animated" v-bind:class="{animate__backInDown}">{{states}}</h5>
-            <ul class="text-light">
-                <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
-                    <dt>Total Population</dt>
-                    <dd>{{total_population}}</dd>
-                </li>
-                
-                <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
-                    <dt>Vaccinated Population</dt>
-                    <dd>{{unvaccinated_population}}</dd>
-                </li>
-                <li class="cRow animate__animated " v-bind:class="{animate__backInLeft}">
-                    <dt>Unvaccinated Population</dt>
-                    <dd>{{vaccinated_population}}</dd>
-                </li>
-            </ul>
+                    <li class="cRow animate__animated" v-bind:class="{animate__backInLeft}">
+                        <dt>Vaccinated Population</dt>
+                        <dd>{{unvaccinated_population}}</dd>
+                    </li>
+                    <li class="cRow animate__animated " v-bind:class="{animate__backInLeft}">
+                        <dt>Unvaccinated Population</dt>
+                        <dd>{{vaccinated_population}}</dd>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+    <div class="container">
+        <div class="ratio ratio-16x9">
+            <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/mfE-h57cHT4"
+                title="YouTube video" allowfullscreen></iframe>
+        </div>
+    </div>
 </div>
 
 </template>

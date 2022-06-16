@@ -12,22 +12,7 @@
 <body>
     @include('modules.navbar')
     <div class="mapMaxSize container animate__animated animate__fadeInDown" id="app"></div>
-    <section>
-
-            <h2>Vaccines</h2>
-            <div class="card">
-                <div class="card-body card-body-color">
-                    <h5 class="card-header-color text-danger">Vaccines</h5>
-                    <dl>
-                        <dt>Modificar1</dt>
-                        <dd>Modificar2</dd>
-                    </dl>
-                </div>
-            </div>
-    </section>
-    <section>
-        @include('modules.footer')
-    </section>
+    @include('modules.footer')
 </body>
 <script src="{{asset('../js/main.js')}}" defer></script>
 
