@@ -31,18 +31,25 @@ body{
     color:#fff;
 }
 
+.cCard{
+    border: none;
+    overflow: hidden;
+}
+
 .card-header-color {
-    color: #D11212;
     font-weight:bold;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .card-body-color {
-    background-color: #C6CCE0;
-    border-style: solid;
-    border-width: 4px 4px 4px 4px;
-    border-color: black;
-    border-radius: 0.3rem;
+    background-color: #242F9B;
+    border-radius: 5px;
+}
+
+.card-body-custom{
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 path.departamentos_SV {
@@ -63,4 +70,13 @@ nav{
 
 .mapMaxSize{
     max-width: 800px;
+}
+
+ul{
+    padding: 0px;
+}
+
+.cRow{
+    list-style: none;
+    margin: 0px;
 }

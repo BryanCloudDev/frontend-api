@@ -3,11 +3,29 @@
 <Map v-on:idSet="retrieveData"/>
 
 <div v-if="success">
-    este es un test papus
-    <p>State name: {{states}}</p>
-    <p>Total population: {{total_population}}</p>
-    <p>Unvaccinated Population: {{unvaccinated_population}}</p>
-    <p>Vaccinated Population:{{vaccinated_population}}</p>
+
+<div class="col-sm-4 mt-4">
+    <div class="card cCard p-3 card-body-color animate__fadeIn animate__animated">
+        <div class="card-body card-body-custom">
+            <h5 class="card-header-color text-light animate__animated animate__backInDown">{{states}}</h5>
+            <ul class="text-light">
+                <li class="cRow animate__animated animate__backInLeft">
+                    <dt>Total Population</dt>
+                    <dd>{{total_population}}</dd>
+                </li>
+                
+                <li class="cRow animate__animated animate__backInLeft">
+                    <dt>Vaccinated Population</dt>
+                    <dd>{{unvaccinated_population}}</dd>
+                </li>
+                <li class="cRow animate__animated animate__backInLeft">
+                    <dt>Unvaccinated Population</dt>
+                    <dd>{{vaccinated_population}}</dd>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </div>
 
 </template>
@@ -27,7 +45,7 @@ export default{
             total_population:'',
             unvaccinated_population: '',
             vaccinated_population: '',
-            success: false
+            success: false,
         }
     },
     methods:{
