@@ -29,8 +29,12 @@
                 @endif
                 @foreach($populations as $population)
                 <div class="col-sm-3 mt-4">
+                    @if(count($populations) < 5)
+                    <div class="card cardC">
+                    @else
                     <div class="card">
-                        <div class="card-body">
+                    @endif
+                    <div class="card-body">
                             <h5 class="card-header-color">{{$population->states}}</h5>
                             <dl>
                                 <dt>Total Population</dt>

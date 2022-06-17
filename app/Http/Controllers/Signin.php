@@ -33,6 +33,7 @@ class Signin extends Controller
             session(['auth' => true]);
             return redirect('/');
         }
+        
         elseif(isset($response['message'])){
             return view('signin',['loginError' => $response['message']]);
         }
